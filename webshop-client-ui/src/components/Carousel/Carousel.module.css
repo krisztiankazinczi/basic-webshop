@@ -1,0 +1,60 @@
+.img {
+  /* width: 100%;
+  height: 60vh; */
+  background-color: #cccccc; 
+  height: 500px; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+  background-size: auto; 
+}
+
+.Carousel {
+  width: 100%;
+  height: 60vh;
+  position:relative;
+  margin-bottom: 5vh;
+  margin-top: 3vh;
+}
+
+.LeftArrow {
+  position: absolute;
+  left: 2%;
+  top: 45%;
+  color: white;
+  font-weight: 900;
+}
+
+.RightArrow {
+  position: absolute;
+  right: 2%;
+  top: 45%;
+  color: white;
+  font-weight: 900;
+}
+
+
+.RadioButtons {
+  position: absolute;
+  top: 90%;
+  left: 43%;
+}
+
+.MarketingText {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.3);
+  overflow-x: hidden;
+}
+
+.ProductLink {
+  position: absolute;
+  width: 30%;
+  bottom: 0;
+  right: 0;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.3);
+  overflow-x: hidden;
+}

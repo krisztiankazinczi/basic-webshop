@@ -1,0 +1,24 @@
+.GridContainer {
+  margin-top: 4vh;
+  height: 26vh;
+  background-color: lightgray;
+}
+
+.img {
+  margin-top: 5%;
+  height: 22vh;
+  width: auto;
+}
+
+.center {
+  margin-top: 10vh;
+  cursor: pointer;
+}
+
+h5.center {
+  margin-top: 10vh;
+}
+
+h3.center {
+  margin-top: 8.5vh;
+}

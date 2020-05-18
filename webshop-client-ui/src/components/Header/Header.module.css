@@ -1,0 +1,9 @@
+.img {
+  height: 12vh;
+  width: auto;
+}
+
+.Header {
+  height: 13vh;
+  border-bottom: 2px solid black;
+}

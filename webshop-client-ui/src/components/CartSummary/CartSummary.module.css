@@ -1,0 +1,16 @@
+div.MainContainer {
+  height: auto;
+  background-color: lightgray;
+}
+
+.Title {
+  height: 10vh;
+}
+
+h3.center {
+  margin-top: 2vh;
+}
+
+div.Border {
+  border-top: 2px solid black;
+}

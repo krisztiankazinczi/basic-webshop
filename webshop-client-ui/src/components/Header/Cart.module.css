@@ -1,0 +1,30 @@
+.GridContainer {
+  display: fixed;
+  margin-top: 3vh;
+}
+.showme {
+  display: none;
+}
+
+.GridContainer:hover .showme {
+  display: block;
+  position: absolute;
+  min-width: 15vw;
+  height: auto;
+  top: 10vh;
+  right: 5vw;
+  text-align: end;
+
+}
+
+ul {
+  z-index: 9999;
+  background-color: white;
+  
+}
+
+li {
+  list-style-type: none;
+  z-index: 9999;
+  margin: 0 auto 0 auto;
+}

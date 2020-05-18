@@ -1,0 +1,33 @@
+.GridContainer {
+  background-color: #242121;
+  height: 30vh;
+  margin-top: 5vh;
+}
+
+.img {
+  height: 15vh;
+  width: auto;
+  margin-top: 7.5vh;
+}
+
+
+.list h6 {
+  color: white;
+  margin-top: 2vh;
+  margin-left: 9%;
+  text-decoration: underline;
+}
+
+.list ul {
+  background-color: inherit;
+}
+
+.list ul li a {
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+}
+
+.list ul li a:hover {
+  text-decoration: underline;
+}

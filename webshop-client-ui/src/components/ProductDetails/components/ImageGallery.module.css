@@ -1,0 +1,22 @@
+.bigImg {
+  margin: 4%;
+  width:auto;
+  max-width: 90%;
+  height: 50vh;
+}
+
+.smallImg {
+  /* margin: 2.5%; */
+  width: 90%;
+  max-height: 22vh;
+  cursor: pointer;
+}
+
+.Arrow {
+  margin-top: 4.5vh;
+}
+
+.BigImageContainer {
+  text-align: center;
+  height: 80vh;
+}

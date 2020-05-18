@@ -1,0 +1,26 @@
+div.field {
+  margin-top: 2vh;
+}
+
+.inputField input{
+  width: 100%;
+
+}
+
+.errorBorder input {
+  border: 2px solid red;
+}
+
+.MainContainer {
+  margin-bottom: 5vh;
+}
+
+.CartDetails {
+  margin-top: 2vh;
+  text-align: center;
+}
+
+button.buttons {
+  width: 50%;
+}
+

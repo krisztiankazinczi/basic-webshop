@@ -1,0 +1,46 @@
+div.Card {
+  margin: 3%;
+}
+
+
+.CardMedia {
+  padding: 5%;
+  width: auto;
+  max-width: 90%;
+  height: 180px;
+}
+
+.center {
+  text-align: center;
+}
+
+
+
+
+.properties div {
+  display: inline-block;
+  width: 33%;
+  text-align: center;
+}
+
+.properties div:first-child {
+  text-align: start;
+}
+
+.properties div:last-child {
+  text-align: end;
+}
+
+.CartButton button {
+  display: inline-block;
+  text-transform: capitalize;
+  font-size: 13px;
+}
+
+.Recommendations {
+  margin: 0, 2.5vh, 0, 2.5vh;
+}
+
+
+
+

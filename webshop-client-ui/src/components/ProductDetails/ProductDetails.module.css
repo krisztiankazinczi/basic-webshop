@@ -1,0 +1,76 @@
+div.ProductDetails {
+  margin-top: 2%;
+}
+
+
+.ImageGallery {
+  margin: 2.5%;
+  height: 80vh;
+}
+
+.BigImageContainer {
+  text-align: center;
+  height: 80vh;
+}
+
+
+
+div.ProductDescription {
+  height: 68vh;
+  width: 80%;
+  overflow-y: scroll;
+}
+
+div.ProductDescription h5 {
+  width: 90%;
+  font-size: 17px;
+}
+
+
+h4.ProductName {
+  margin-top: 3%;
+}
+
+.stock {
+  margin-top: 5%;
+}
+
+button.Button {
+  background-color: #6772e5;
+  color: #fff;
+  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+  position: absolute;
+  bottom: 5vh;
+  right: 5%;
+}
+.button:hover {
+  background-color: #5469d4;
+}
+
+h3.outOfStock {
+  position: absolute;
+  bottom: 5vh;
+  right: 5%;
+  font-weight: 700;
+}
+
+div.FullSpecs {
+  min-height: 30vh;
+  max-height: 60vh;
+  text-overflow: hidden;
+  width: 90%;
+  margin-left: 5%;
+}
+
+.Recommendations {
+  height: 67vh;
+}
+
+.LeftArrow {
+  margin-top: 26vh;
+}
+
+.RightArrow {
+  margin-top: 26vh;
+}
+
