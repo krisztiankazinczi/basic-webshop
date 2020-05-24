@@ -9,9 +9,23 @@ import { Provider } from 'react-redux';
 
 import rootReducer from './store/reducers/root-reducer'
 
+import * as ACTIONS from './store/actions/actions';
+
 const store = createStore(rootReducer, composeWithDevTools(
   applyMiddleware()
 ));
+
+// const  getDataFromServer = async() => {
+//   fetch('http://localhost:5000/productsToClients', {
+//       method: 'GET'
+//     })
+//       .then(res => res.json())
+//       .then(res => {
+//         dispatch(ACTIONS.getDataFromServer({products: res.products}))
+//       })
+// }
+
+// store.dispatch(getDataFromServer())
 
 
 ReactDOM.render(<Provider store={store}>

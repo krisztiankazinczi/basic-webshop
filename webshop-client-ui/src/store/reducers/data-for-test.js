@@ -51,7 +51,7 @@ let products = [
   },
   {
     name: 'MSI GL65 9SE 9S7-16U512-262HU Notebook',
-    sku: 'KG99N',
+    sku: 'MG99N',
     stock: 2,
     description: 'Gaming notebook - Intel Core i5 9300H Coffee Lake, 15,6", 1920 × 1080, matt, IPS, 8 GB RAM, DDR4 NVIDIA GeForce GTX 1650, 4GB, SSD 128 GB + HDD 1TB, 5400 f/p, numerikus billentyűzet, háttérvilágításos billentyűzet, webkamera, USB 3.2 Gen 1, USB-C, WiFi 802.11ac, 3-cellás, 52,5 Wh akkumulátor, Windows 10 Home 81SY004SHV. Laptop - Intel Core i7 9750H Coffee Lake, 15,6", 1920 × 1080, matt, 8 GB RAM, DDR4 NVIDIA GeForce RTX 2060 , 6GB, SSD 512 GB, numerikus billentyűzet, háttérvilágításos billentyűzet, USB 3.2 Gen 1, USB-C, WiFi 802.11ac, 4-cellás, 66 Wh akkumulátor, Operációs rendszer nélkül',
     price: 449900,

@@ -18,23 +18,23 @@ class Carousel extends React.Component {
     super(props)
 
     this.state = {
-      selectedRadioBtn: this.props.offers[0].product_sku
+      selectedRadioBtn: this.props.offers.length ? this.props.offers[0].id : ""
     }
   }
 
   carouselChanging() {
-      const whichIsActualPicIndex = this.props.offers.findIndex(offer => offer.product_sku === this.state.selectedRadioBtn)
+      const whichIsActualPicIndex = this.props.offers.findIndex(offer => offer.id === this.state.selectedRadioBtn)
       let newPicIndex = 0;
       if (whichIsActualPicIndex !== this.props.offers.length - 1) {
         newPicIndex = whichIsActualPicIndex + 1;
       }
-      this.setState( { selectedRadioBtn: this.props.offers[newPicIndex].product_sku } )
+      this.setState( { selectedRadioBtn: this.props.offers[newPicIndex].id } )
   }
 
   componentDidMount() {
     this.timerID = setInterval(
       () => this.carouselChanging(),
-      3000
+      5000
     )
   }
 
@@ -47,7 +47,7 @@ class Carousel extends React.Component {
 
   changeOffer(direction) {
     let selectedRadioBtn = 0;
-    const idxOfSelected = this.props.offers.findIndex(offer => offer.product_sku === this.state.selectedRadioBtn);
+    const idxOfSelected = this.props.offers.findIndex(offer => offer.id === this.state.selectedRadioBtn);
 
     // console.log(selectedRadioBtn = idxOfSelected + direction)
     // if (idxOfSelected !== this.state.offers.length - 1 && idxOfSelected !== 0) {
@@ -63,7 +63,7 @@ class Carousel extends React.Component {
     if (direction > 0) {
       if (idxOfSelected !== this.props.offers.length - 1) selectedRadioBtn = idxOfSelected + 1
       this.setState({ 
-        selectedRadioBtn: this.props.offers[selectedRadioBtn].product_sku
+        selectedRadioBtn: this.props.offers[selectedRadioBtn].id
       })
       return
     }
@@ -71,27 +71,32 @@ class Carousel extends React.Component {
     if (idxOfSelected !== 0) selectedRadioBtn = idxOfSelected - 1
     else if (idxOfSelected === 0) selectedRadioBtn = this.props.offers.length - 1
     this.setState({ 
-      selectedRadioBtn: this.props.offers[selectedRadioBtn].product_sku
+      selectedRadioBtn: this.props.offers[selectedRadioBtn].id
     })
 
   }
 
-  handleChange(product_sku) {
+  handleChange(id) {
+    const newIdx = this.props.offers.findIndex(o => o.id == id)
     this.setState( {
-      selectedRadioBtn: product_sku
+      selectedRadioBtn: newIdx > -1 ? this.props.offers[newIdx].id : this.props.offers[0].id
     })
+  };
+
+  getId = () => {
+    const id = Math.floor(Math.random() * 1000); 
+    return id;
   };
 
   
   render() {
-    if (!this.props.offers.length) return (<div></div>)
+    if (!this.props.offers || !this.props.offers.length) return (<div></div>)
 
-    const selectedOffer = this.props.offers.find(offer => offer.product_sku === this.state.selectedRadioBtn)
-
+    const selectedOffer = this.props.offers.find(offer => offer.id === this.state.selectedRadioBtn)
     return (
       
       <Grid container className={classes.Carousel} direction="column" justify="center" align="center">
-        <Grid className={classes.img} item lg={12} style={{ backgroundImage: `url(${selectedOffer.imagePath})` }}>
+        <Grid key={this.getId()} className={classes.img} item lg={12} style={{ backgroundImage: `url(${selectedOffer.imagePath})` }}>
           <Typography className={classes.MarketingText} variant="h2">{selectedOffer.marketingText}</Typography>
           <ArrowBackIosIcon onClick={ () => this.changeOffer(-1)} className={classes.LeftArrow} fontSize='large'></ArrowBackIosIcon>
           <ArrowForwardIosIcon onClick={ () => this.changeOffer(1)} className={classes.RightArrow} fontSize='large'></ArrowForwardIosIcon>
@@ -100,7 +105,7 @@ class Carousel extends React.Component {
           </Link>
           <div className={classes.RadioButtons} onChange={(e) => this.handleChange(e.target.value)}>
             {this.props.offers.map( (offer, idx) => {
-              return <Radio key={idx} value={offer.product_sku} checked={this.state.selectedRadioBtn === offer.product_sku ? true : false} />
+              return <Radio key={idx} value={offer.id} checked={this.state.selectedRadioBtn === offer.id ? true : false} />
             })}
           </div>
         </Grid>

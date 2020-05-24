@@ -88,6 +88,11 @@ class Checkout extends React.Component {
         if (!Object.keys(res).length) {
           success.innerHTML = 'We have saved your order. We will inform you via email if we provided your order to the courier.'
           this.props.emptyCart()
+          this.setState({
+            name: "",
+            email: "",
+            address: ""
+          })
           return
         }
 
@@ -174,19 +179,19 @@ class Checkout extends React.Component {
           <Grid className={classes.field} item container lg={12} align="center">
             <Grid item lg={4}></Grid>
             <Grid item lg={8}>
-              {this.props.totalValue 
+              {this.props.totalValue
                 ?
-                  <Button
-                    onClick={(e) => this.handleSubmit(e)}
-                    className={classes.buttons}
-                    size="large"
-                    color="primary"
-                    variant="contained"
-                  >
-                    Checkout
+                <Button
+                  onClick={(e) => this.handleSubmit(e)}
+                  className={classes.buttons}
+                  size="large"
+                  color="primary"
+                  variant="contained"
+                >
+                  Checkout
                   </Button>
                 :
-                  ""
+                ""
               }
             </Grid>
 
@@ -208,7 +213,7 @@ function mapStateToProps(state, props) {
   const dataToServer = []
 
   Object.values(state.cartReducer.cart).forEach(cartItem => {
-    const product = state.productsReducer.find(p => p.name === cartItem.name)
+    const product = state.productsReducer.products.find(p => p.name === cartItem.name)
     if (product) {
       dataToServer.push({ sku: product.sku, pieces: cartItem.pieces, totalPrice: cartItem.price })
     }

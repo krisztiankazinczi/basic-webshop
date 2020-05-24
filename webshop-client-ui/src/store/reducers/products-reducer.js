@@ -3,13 +3,19 @@ import * as ACTION_TYPES from '../actions/action_types'
 import {products} from './data-for-test'
 
 const initialState = {
-  products
+  products: []
 }
 
 const productsReducer = (state = initialState, action) => {
   let updatedProducts
   
     switch(action.type) {
+      case ACTION_TYPES.GET_PRODUCTS:
+        return {
+          ...state,
+          products: action.payload.products
+        }
+        
       case ACTION_TYPES.UPDATE_STOCK:
         const productIndex = state.products.findIndex(product => product.sku === action.payload.sku)
 
@@ -49,7 +55,7 @@ const productsReducer = (state = initialState, action) => {
             ...state,
             products: [...updatedProducts]
           }
-
+      
       default:
         return state
     }

@@ -67,7 +67,7 @@ class ProductBox extends React.Component {
                 </CardMedia>
                 <CardContent>
                   <Typography className={classes.properties} gutterBottom variant="subtitle1" component="h4">
-                    <div>{this.state.name.length < 10 ? this.state.name : `${this.state.name.substring(0, 9)}...`}</div>
+                    <div>{this.state.name.length < 10 ? this.state.name : `${this.state.name.substring(0, 8)}...`}</div>
                     <div>{this.state.sku}</div>
                     <div>{this.state.price} HUF</div>
                   </Typography>

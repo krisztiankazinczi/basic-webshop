@@ -1,0 +1,20 @@
+{
+  "name": "webshop-admin-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "formidable": "^1.2.2",
+    "sqlite3": "^4.1.1",
+    "uid": "^1.0.0",
+    "uid-safe": "^2.1.5"
+  }
+}

@@ -21,6 +21,7 @@ div.Card {
   display: inline-block;
   width: 33%;
   text-align: center;
+  font-size: 16px;
 }
 
 .properties div:first-child {

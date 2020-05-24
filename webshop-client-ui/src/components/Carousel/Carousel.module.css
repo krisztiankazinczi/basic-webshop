@@ -6,6 +6,27 @@
   background-position: center; 
   background-repeat: no-repeat; 
   background-size: auto; 
+  animation: movein 1s; /*moveout 0.5s 4s*/
+  /* transition: all 2s ease-in-out;
+  transform: translate(-350px,0); */
+}
+
+@keyframes movein {
+  0% {
+    transform: translate(100%,0);
+  }
+  100% {
+    transform: translate(0,0);
+  }
+}
+
+@keyframes moveout {
+  0% {
+    transform: translate(0,0);
+  }
+  100% {
+    transform: translate(100%,0);
+  }
 }
 
 .Carousel {
@@ -14,6 +35,7 @@
   position:relative;
   margin-bottom: 5vh;
   margin-top: 3vh;
+  
 }
 
 .LeftArrow {

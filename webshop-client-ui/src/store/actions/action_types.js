@@ -8,3 +8,6 @@ export const EMPTY_CART = "EMPTY_CART"
 
 export const SET_STOCK_BACK = "SET_STOCK_BACK"
 
+export const GET_PRODUCTS = 'GET_PRODUCTS'
+
+export const GET_OFFERS = 'GET_OFFERS'
